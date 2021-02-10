@@ -25,7 +25,12 @@ try {
         return;
     }
 
-    core.setOutput('match', matches[1]);
+    matches.shift()
+
+    for(const index in matches) {
+        if(isNaN(index)) continue
+        core.setOutput(`match_${index}`, matches[index]);
+    }
 
 } catch (error) {
     core.setFailed(error.message);
