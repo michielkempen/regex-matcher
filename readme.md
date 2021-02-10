@@ -18,7 +18,7 @@ This GitHub action matches a string against a regex pattern and outputs its firs
 
 ## Outputs
 
-### `matches`
+### `match`
 
 The first capture group of the string matched against the regex pattern. (e.g. **"World"**)
 
@@ -31,4 +31,4 @@ The first capture group of the string matched against the regex pattern. (e.g. *
             regex_pattern: '^Hello (.*)$'
             search_string: 'Hello World'
     - name: Greeting
-        run: echo "Hello ${{ steps.who_to_greet.outputs.matches[1] }}"
+        run: echo "Hello ${{ steps.who_to_greet.outputs.match }}"

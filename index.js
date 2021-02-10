@@ -25,7 +25,7 @@ try {
         return;
     }
 
-    core.setOutput('matches', matches[1]);
+    core.setOutput('match', matches[1]);
 
 } catch (error) {
     core.setFailed(error.message);
