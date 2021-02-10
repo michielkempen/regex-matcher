@@ -1,0 +1,18 @@
+name: 'Match a string against a regex pattern'
+description: 'Match a string against a regex pattern and output its matches.'
+inputs:
+  regex_pattern:
+    description: "regex pattern"
+    required: true
+  regex_flags:
+    description: "regex flags"
+    required: false
+  search_string:
+    description: "search string"
+    required: true
+outputs:
+  matches:
+    description: 'the matches of the string against the regex pattern'
+runs:
+  using: 'node12'
+  main: 'index.js'
