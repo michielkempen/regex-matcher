@@ -1,5 +1,5 @@
 name: 'Match a string against a regex pattern'
-description: 'Match a string against a regex pattern and output its matches.'
+description: 'Match a string against a regex pattern and output its first capture group, if any.'
 inputs:
   regex_pattern:
     description: "regex pattern"
@@ -12,7 +12,7 @@ inputs:
     required: true
 outputs:
   matches:
-    description: 'the matches of the string against the regex pattern'
+    description: 'the first capture group of the string matched against the regex pattern'
 runs:
   using: 'node12'
   main: 'index.js'

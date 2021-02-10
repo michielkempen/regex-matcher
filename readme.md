@@ -1,6 +1,6 @@
 # regex-matcher
 
-This GitHub action matches a string against a regex pattern and outputs its matches according to the JavaScript `match` function.
+This GitHub action matches a string against a regex pattern and outputs its first capture group, if any.
 
 ## Inputs
 
@@ -20,7 +20,7 @@ This GitHub action matches a string against a regex pattern and outputs its matc
 
 ### `matches`
 
-The matches of the string against the regex pattern. (e.g. **["Hello World", "World"]**)
+The first capture group of the string matched against the regex pattern. (e.g. **"World"**)
 
 ## Example usage
 
