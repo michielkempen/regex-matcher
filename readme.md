@@ -1,6 +1,6 @@
 # regex-matcher
 
-This GitHub action matches a string against a regex pattern and outputs its first capture group, if any.
+This GitHub action matches a string against a regex pattern and outputs its capture groups, if any.
 
 ## Inputs
 
@@ -18,9 +18,9 @@ This GitHub action matches a string against a regex pattern and outputs its firs
 
 ## Outputs
 
-### `match`
+### `match_n`
 
-The first capture group of the string matched against the regex pattern. (e.g. **"World"**)
+The *(n-1)th* capture group of the string matched against the regex pattern. (e.g. **"World"**)
 
 ## Example usage
 
@@ -31,4 +31,4 @@ The first capture group of the string matched against the regex pattern. (e.g. *
             regex_pattern: '^Hello (.*)$'
             search_string: 'Hello World'
     - name: Greeting
-        run: echo "Hello ${{ steps.who_to_greet.outputs.match }}"
+        run: echo "Hello ${{ steps.who_to_greet.outputs.match_0 }}"
